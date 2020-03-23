@@ -8,12 +8,17 @@ const musicianRoutes = require('./routes/musician');
 const app = express();
 const port = process.env.PORT || 3001;
 
+
 // include routes
+app.get("/status",(req,res)=>{
+  res.send("Status:ok");
+});
 app.use('/musician', musicianRoutes);
 
 app.use(express.static('public'));
 
 // Index route
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
