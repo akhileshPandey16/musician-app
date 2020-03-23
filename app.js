@@ -11,7 +11,7 @@ const port = process.env.PORT || 3001;
 
 // include routes
 app.get("/status",(req,res)=>{
-  res.send("Status:ok");
+  res.send("Status:Akhilesh");
 });
 app.use('/musician', musicianRoutes);
 
